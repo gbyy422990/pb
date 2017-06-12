@@ -1,6 +1,8 @@
 # pb
 最后的pb文件,但是没有优化模型
 
+In this tutorial i use the the tensorflow android calssifier, if you want to build it, it will take you some time, as you’ll need to install the NDK, Bazel, and the total build time with Android Studio will take around 40 minutes. so i push my build files in my github.
+
 1 step:  Retraining your own model, and you can use docker for traning. (retraing your own tensorflow model tutorial:https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0)
 
 2 step:  After retraining, you will get two files like: "retrained_graph.pb", "retrained_labels.txt"
@@ -8,7 +10,7 @@
 3 step:  We have our model and label. However, if we try to import it in our Android sample, after build your project, we will get an error:  
 Op BatchNormWithGlobalNormalization is not available in GraphDef version 21. It has been removed in version 9. Use tf.nn.batch_normalization().
 
-Because you did not optimize the model, so first we need need to optimize by using a tool named "optimize_for_inference" in your tensorflow folder, run two codes follow:
+Because you did not optimize the model, so first we need need to optimize by using a tool named "optimize_for_inference" in your tensorflow folder, run two codes follow:(you have to install bazel which is a build tool coordinates builds and run tests and you can install this tool: https://bazel.build/versions/master/docs/install.html)
          
          ./configure (just select all default values)
          bazel build tensorflow/python/tools:optimize_for_inference 
