@@ -1,7 +1,7 @@
 # pb
 最后的pb文件,但是没有优化模型
 
-In this tutorial i use the the tensorflow android calssifier, if you want to build it, it will take you some time, as you’ll need to install the NDK, Bazel, and the total build time with Android Studio will take around 40 minutes. so i push my build files in my github.
+In this tutorial i use the the tensorflow android calssifier, if you want to build it, it will take you some time, as you’ll need to install the NDK, Bazel, and the total build time with Android Studio will take around 40 minutes, of course you can build it by yourself by this url (https://github.com/tensorflow/tensorflow). But for someone who just want to try this demo, i pushed my build files in my github.
 
 1 step:  Retraining your own model, and you can use docker for traning. (retraing your own tensorflow model tutorial:https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0)
 
