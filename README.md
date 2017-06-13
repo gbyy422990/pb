@@ -33,6 +33,15 @@ And then start your new container with:
             --output_names=final_result
 in this step it just take about 2 min, and this script will generate a "retrained_graph_optimized.pb" file you will now be able into import in your Android project.
 
+Step optional:  When you get your own model, you can see your model's size is 87 Mb, its not a problem, but you can run codes follow to reduce the size of the model:
+         
+         bazel build tensorflow/contrib/quantization/tools:quantize_graph
+         bazel-bin/tensorflow/contrib/quantization/tools/quantize_graph \
+           –input=/tf_files/optimized_graph.pb \
+           –output=/tf_files/rounded_graph.pb \
+           –output_node_names=final_result \
+           –mode=weights_rounded
+           
 5 step:  In the end, you can now delete the previous ImageNet model from our Android app’s assets folder and place the new model (retrained_graph_optimized.pb and retrained_labels.txt) instead.
 
 
