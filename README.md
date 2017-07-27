@@ -1,7 +1,11 @@
 # pb
-最后的pb文件,但是没有优化模型
+Tutorial of tensorflow android calssifier by GAO Bin
 
-In this tutorial i use the the tensorflow android calssifier, if you want to build it, it will take you some time, as you’ll need to install the NDK, Bazel, and the total build time with Android Studio will take around 40 minutes, of course you can build it by yourself by this url (https://github.com/tensorflow/tensorflow). But for someone who just want to try this demo, i pushed my build files in my github.
+Version:
+Android Studio 2.3.3
+Ubuntu 16.04
+
+In this tutorial I use the the tensorflow android calssifier, if you want to build it, it will take you some time, as you’ll need to install the NDK, Bazel, and the total build time with Android Studio will take around 40 minutes, of course you can build it by yourself by this url (https://github.com/tensorflow/tensorflow). But for someone who just want to try this demo, i pushed my build files in my github.
 
 1 step:  Retraining your own model, and you can use docker for traning. (retraing your own tensorflow model tutorial:https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0)
 
@@ -43,5 +47,7 @@ Step optional:  When you get your own model, you can see your model's size is 87
             –-mode=weights_rounded
            
 5 step:  In the end, you can now delete the previous ImageNet model from our Android app’s assets folder and place the new model (retrained_graph_optimized.pb and retrained_labels.txt) instead.
+
+6 step: Build your own app in Android Studio.
 
 
