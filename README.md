@@ -30,11 +30,11 @@ And then start your new container with:
          
 4 step:  When you finish building tool, you can run follow code to optimeze your model:
          
-         bazel-bin/tensorflow/python/tools/optimize_for_inference \
-            --input=/pb/retrained_graph.pb \
-            --output=/pb/retrained_graph_optimized.pb \
-            --input_names=Mul \
-            --output_names=final_result
+                  bazel-bin/tensorflow/python/tools/optimize_for_inference \
+                     --input=/pb/retrained_graph.pb \
+                     --output=/pb/retrained_graph_optimized.pb \
+                     --input_names=Mul \
+                     --output_names=final_result
 in this step it just take about 2 min, and this script will generate a "retrained_graph_optimized.pb" file you will now be able into import in your Android project.
 
 Step optional:  When you get your own model, you can see your model's size is 87 Mb, its not a problem, but you can run codes follow to reduce the size of the model:
