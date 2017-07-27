@@ -46,6 +46,20 @@ Step optional:  When you get your own model, you can see your model's size is 87
             –-output_node_names=final_result \
             –-mode=weights_rounded
            
+ps:When you finish your training, you have to do:
+Change the flowing in Android studio, in folder: src->main->java->org->tensorflow->demo->ClassifierActivity,and now you have to change
+the line 61 to line 69 like the flowing:
+                    private static final int INPUT_SIZE = 299;
+                    private static final int IMAGE_MEAN = 128;
+                    private static final float IMAGE_STD = 128;
+                    private static final String INPUT_NAME = "Mul";
+                    private static final String OUTPUT_NAME = "final_result";
+
+                    private static final String MODEL_FILE = "file:///android_asset/tensorflow_inception_graph.pb";
+                    private static final String LABEL_FILE =
+                        "file:///android_asset/imagenet_comp_graph_label_strings.txt";
+
+
 5 step:  In the end, you can now delete the previous ImageNet model from our Android app’s assets folder and place the new model (retrained_graph_optimized.pb and retrained_labels.txt) instead.
 
 6 step: Build your own app in Android Studio.
