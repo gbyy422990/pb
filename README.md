@@ -12,7 +12,7 @@ In this tutorial I use the the tensorflow android calssifier, if you want to bui
 2 step:  After retraining, you will get two files like: "retrained_graph.pb", "retrained_labels.txt"
 
 3 step:  We have our model and label. However, if we try to import it in our Android sample, after build your project, we will get an error:  
-Op BatchNormWithGlobalNormalization is not available in GraphDef version 21. It has been removed in version 9. Use tf.nn.batch_normalization().
+             Op BatchNormWithGlobalNormalization is not available in GraphDef version 21. It has been removed in version 9. Use                      tf.nn.batch_normalization().
 
 Because you did not optimize the model, so first we need need to optimize by using a tool named "optimize_for_inference" in your tensorflow folder, run two codes follow:(you have to install bazel which is a build tool coordinates builds and run tests and you can install this tool: https://bazel.build/versions/master/docs/install.html)
          
