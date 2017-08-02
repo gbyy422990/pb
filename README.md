@@ -49,6 +49,7 @@ Step optional:  When you get your own model, you can see your model's size is 87
 ps:When you finish your training, you have to do:
 Change the flowing in Android studio, in folder: src->main->java->org->tensorflow->demo->ClassifierActivity,and now you have to change
 the line 61 to line 69 like the flowing:
+
                     private static final int INPUT_SIZE = 299;
                     private static final int IMAGE_MEAN = 128;
                     private static final float IMAGE_STD = 128;
