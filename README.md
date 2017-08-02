@@ -42,9 +42,9 @@ Step optional:  When you get your own model, you can see your model's size is 87
          bazel build tensorflow/contrib/quantization/tools:quantize_graph
          bazel-bin/tensorflow/contrib/quantization/tools/quantize_graph \
             –-input=/tf_files/optimized_graph.pb \
-            –-output=/tf_files/rounded_graph.pb \
-            –-output_node_names=final_result \
-            –-mode=weights_rounded
+                  –-output=/tf_files/rounded_graph.pb \
+                  –-output_node_names=final_result \
+                  –-mode=weights_rounded
            
 ps:When you finish your training, you have to do:
 Change the flowing in Android studio, in folder: src->main->java->org->tensorflow->demo->ClassifierActivity,and now you have to change
